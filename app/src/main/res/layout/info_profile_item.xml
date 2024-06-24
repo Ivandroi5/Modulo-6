@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="261dp"
+    android:background="@color/celeste_wallet"
+    >
+    <TextView
+        android:id="@+id/text_initial_home"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/inicio"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_profile_home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/avatar_profile"
+        app:shapeAppearance="@style/radius"
+        android:src="@drawable/default_profile_image"
+        />
+
+    <TextView
+        android:id="@+id/text_welcome_home"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="125dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/hola_amanda"
+        android:textColor="#80FFFFFF"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/text_balance_total"
+        android:layout_width="119dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/balance_total"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+         />
+
+    <TextView
+        android:id="@+id/balance_Home"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/dinero_total"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+         />
+
+    <ImageView
+        android:id="@+id/notification_home"
+        android:layout_width="24dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="230dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/notification_home"
+
+         />
+
+
+</FrameLayout>

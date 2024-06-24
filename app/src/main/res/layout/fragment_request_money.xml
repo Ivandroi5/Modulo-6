@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/request_money_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.presentation.ui.RequestMoneyFragment">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="138dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/ingresar_dinero"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageProfileReceiveMoney"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="126dp"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/profile_send_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <TextView
+        android:id="@+id/nameProfileReceiveMoney"
+        android:layout_width="75dp"
+
+        android:layout_height="21dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/reem_khaled"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageProfileReceiveMoney"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emailProfileReceiveMoney"
+        android:layout_width="116dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/jua_regular"
+
+
+        android:text="@string/reem_1993_gmail_com"
+        android:textColor="@color/blacksuperopacity"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageProfileReceiveMoney"
+        app:layout_constraintTop_toBottomOf="@+id/nameProfileReceiveMoney" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="122dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/cantidad_a_ingresar"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfileReceiveMoney" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="@color/celsteoscuro"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="345dp"
+            android:layout_height="56dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="@string/_20_00"
+            android:textColor="@color/celsteoscuro"
+            android:textSize="16sp"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/Nota"
+        android:layout_width="142dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="218dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/notas_de_transferencia"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/imputnotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nota">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="345dp"
+            android:layout_height="200dp"
+            android:fontFamily="@font/jua_regular"
+            android:text="@string/agregar_notas_de_transferecia_opcional"
+            android:textColor="@color/blackopacity"
+            android:gravity="start"
+            android:textSize="14sp"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_recieve_money"
+        android:layout_width="345dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/celsteoscuro"
+        android:drawableLeft="@drawable/path"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/ingresar_dinero"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+
+        />
+
+    <ImageButton
+        android:id="@+id/back_arrow_request_money"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="86dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon"
+        android:contentDescription="@string/flecha_volver" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

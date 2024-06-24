@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.presentation.ui.HomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frameLayoutInfoProfile"
+        android:layout_width="match_parent"
+        android:layout_height="262dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/info_profile_item"
+        android:background="@drawable/background_home"
+
+
+        />
+
+
+
+
+    <Button
+        android:id="@+id/travel_to_send_money"
+        android:layout_width="165dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/green"
+        android:drawableLeft="@drawable/send_icon_black"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/enviar_dinero"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutInfoProfile"
+        app:shapeAppearanceOverlay="@style/radiusbutton" />
+
+    <Button
+        android:id="@+id/travel_to_receive_money"
+        android:layout_width="167dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/celeste_wallet"
+        android:drawableLeft="@drawable/path"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/ingresar_dinero"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutInfoProfile"
+        app:shapeAppearanceOverlay="@style/radiusbutton" />
+
+    <TextView
+        android:id="@+id/textViewLastTrans"
+        android:layout_width="155dp"
+        android:layout_height="24dp"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="205dp"
+
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/ultimas_transacciones"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/travel_to_send_money" />
+
+    <ImageView
+        android:id="@+id/imageNoTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="137dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLastTrans"
+        app:srcCompat="@drawable/empty_illustration"
+
+        />
+
+    <TextView
+        android:id="@+id/textNoTransaction"
+        android:layout_width="184dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/no_hay_transacciones_registradas"
+        android:textColor="@color/blackopacity"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageNoTransaction" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTransaction"
+        android:layout_width="330dp"
+        android:layout_height="315dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLastTrans"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/transaction_item" />
+
+    <TextView
+        android:id="@+id/no_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="No hay perfil"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

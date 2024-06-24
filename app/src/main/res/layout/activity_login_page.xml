@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundloginpage"
+    tools:context=".login.presentation.ui.LoginPageActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="315dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/Login_access"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="34dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="75dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/contrasena"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextTextEmailAddress3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:background="@color/white"
+        android:textColorHint="@color/blackopacity"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_email_Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ingresar_tu_email"
+            android:textSize="14sp"
+            android:fontFamily="@font/jua_regular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextTextPassword3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
+        app:endIconMode="password_toggle"
+        android:background="@color/white"
+        android:textColorHint="@color/blackopacity"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_password_Login"
+            android:layout_width="315dp"
+            android:layout_height="49dp"
+            android:fontFamily="@font/jua_regular"
+            android:hint="@string/ingresa_tu_contrasena"
+            android:textSize="14sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+
+
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/jua_regular"
+        android:gravity="end"
+        android:text="@string/olvidaste_tu_contrase_a"
+
+        android:textColor="@color/celsteoscuro"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+
+    <Button
+        android:id="@+id/loginAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/login"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+
+    <TextView
+        android:id="@+id/create_account_link_login"
+        android:layout_width="147dp"
+        android:layout_height="21dp"
+
+        android:layout_marginStart="115dp"
+
+
+        android:layout_marginTop="24dp"
+
+
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/crear_nueva_cuenta"
+
+        android:textAlignment="center"
+        android:textColor="@color/celsteoscuro"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAccountButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.alkewalletm5.home.presentation.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sendMoneyFragment2"
+            app:destination="@id/sendMoneyFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_requestMoneyFragment2"
+            app:destination="@id/requestMoneyFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_profilePageFragment2"
+            app:destination="@id/profilePageFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendMoneyFragment2"
+        android:name="com.example.alkewalletm5.home.presentation.ui.SendMoneyFragment"
+        android:label="fragment_send_money"
+        tools:layout="@layout/fragment_send_money" >
+        <action
+            android:id="@+id/action_sendMoneyFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestMoneyFragment2"
+        android:name="com.example.alkewalletm5.home.presentation.ui.RequestMoneyFragment"
+        android:label="fragment_request_money"
+        tools:layout="@layout/fragment_request_money" >
+        <action
+            android:id="@+id/action_requestMoneyFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePageFragment2"
+        android:name="com.example.alkewalletm5.profile.presentation.ui.ProfilePageFragment"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page" />
+</navigation>

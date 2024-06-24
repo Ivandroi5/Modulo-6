@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context= ".profile.presentation.ui.ProfilePageFragment">
+
+    <Button
+        android:id="@+id/textInputLayout1"
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableLeft="@drawable/icon_profile"
+        android:drawableRight="@drawable/arrow_icon"
+        android:fontFamily="@font/jua_regular"
+        android:gravity="center_vertical"
+        android:text="@string/mi_informaci_n"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:shapeAppearanceOverlay="@style/radiusbutton"/>
+
+    <Button
+        android:id="@+id/textInputLayout2"
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableLeft="@drawable/card_icon"
+        android:drawableRight="@drawable/arrow_icon"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/mis_tarjetas"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
+
+
+
+    <Button
+        android:id="@+id/textInputLayout3"
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableRight="@drawable/arrow_icon"
+        android:drawableLeft="@drawable/settings_icon"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/opciones"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+
+    <Button
+        android:layout_width="345dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/whiteyellow"
+        android:drawableLeft="@drawable/help_icon"
+        android:drawableRight="@drawable/arrow_icon"
+        android:fontFamily="@font/jua_regular"
+        android:gravity="center_vertical"
+        android:text="@string/centro_de_ayuda"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:shapeAppearanceOverlay="@style/radiusbutton" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="375dp"
+        android:layout_height="282dp"
+        android:background="@color/whiteyellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="71dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="152dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/mi_perfil"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit_icon" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_home"
+        android:layout_width="65dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="154dp"
+        android:background="@drawable/oval"
+        android:contentDescription="@string/avatar_profile"
+        android:src="@drawable/avatar_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:shapeAppearanceOverlay="@style/radiusOval" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="108dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="134dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/amanda_alkemy"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

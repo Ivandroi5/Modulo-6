@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/send_money_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.presentation.ui.SendMoneyFragment">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="119dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/enviar_dinero"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerSendMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:listitem="@layout/contact_item" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="122dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/cantidad_a_ingresar"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSendMoney" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amout_send_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="@color/green"
+        android:textColorHint="@color/green"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="345dp"
+            android:layout_height="56dp"
+            android:fontFamily="@font/jua_regular"
+            android:hint="@string/_20_00"
+            android:textSize="16sp"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/Nota"
+        android:layout_width="142dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="218dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/notas_de_transferencia"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amout_send_money" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/imput_notas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        android:textColorHint="@color/blackopacity"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nota">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="345dp"
+            android:layout_height="200dp"
+            android:fontFamily="@font/jua_regular"
+            android:hint="@string/agregar_notas_de_transferecia_opcional"
+
+            android:gravity="start"
+            android:textSize="14sp"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_send_money"
+        android:layout_width="345dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/green"
+        android:drawableLeft="@drawable/send_icon_black"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/enviar_dinero"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/radiusbutton"
+
+        />
+
+    <ImageButton
+        android:id="@+id/back_arrow_send_money"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="86dp"
+        android:background="@color/white"
+        android:contentDescription="@string/flecha_volver"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

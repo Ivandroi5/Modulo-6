@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login">
+
+    <ImageView
+        android:id="@+id/imageViewLogin"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="203dp"
+        android:background="@drawable/vector"
+
+
+        android:contentDescription="@string/logo_image"
+        android:src="@drawable/send_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/initial_name"
+        android:layout_width="168dp"
+        android:layout_height="42dp"
+
+
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="14dp"
+
+
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/alke_wallet"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin" />
+
+    <TextView
+        android:id="@+id/text_login"
+        android:layout_width="240dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="124dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/text_login"
+        android:textColor="@color/white"
+
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initial_name" />
+
+
+    <Button
+        android:id="@+id/create_account_button"
+        android:layout_width="315dp"
+
+        android:layout_height="49dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/rectangle"
+        android:clickable="true"
+
+
+        android:focusable="true"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/text_button_login"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_login" />
+
+    <TextView
+        android:id="@+id/user_access_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/jua_regular"
+        android:text="@string/user_access"
+
+
+        android:textAlignment="center"
+        android:textColor="@color/celeste_wallet"
+
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
