@@ -49,6 +49,9 @@ class SingupActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Valida los campos del formulario de registro y agrega la informacion al viewModel
+     */
     private fun validateFields(): Boolean {
         var error: String? = null
         val name = binding.textInputName.editText?.text.toString()
@@ -67,10 +70,16 @@ class SingupActivity : AppCompatActivity() {
         } else {
             val newUser = UserPost(name, lastName, email, password)
             viewModel.createUser(newUser)
+            //viewModel.createAccount()
+            Toast.makeText(this, "Usuario creado exitosamente", Toast.LENGTH_SHORT).show()
             true
+
         }
     }
 
+    /**
+     * Valida que las contraseñas coincidan
+     */
     private fun validatePasswords(): Boolean {
         var error: String? = null
         val password = binding.editTextTextPassword3.editText?.text.toString()

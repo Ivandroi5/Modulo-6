@@ -16,7 +16,12 @@ import com.example.alkewalletm5.login.presentation.viewmodel.LoginPageViewModel
 import com.example.alkewalletm5.login.presentation.viewmodel.LoginPageViewModelFactory
 import com.example.alkewalletm5.singup.presentation.ui.SingupActivity
 
+/**
+ * Actividad de la página de inicio de sesión.
+ * Permite al usuario ingresar sus credenciales para iniciar sesión.
+ */
 class LoginPageActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityLoginPageBinding
     private lateinit var viewModel: LoginPageViewModel
 
@@ -29,28 +34,12 @@ class LoginPageActivity : AppCompatActivity() {
         binding.loginAccountButton.setOnClickListener {
             login()
         }
-
-        // Código comentado para referencia
-        /*binding.loginAccountButton.setOnClickListener {
-            val email = binding.enterEmailLogin.text.toString()
-            val password = binding.enterPasswordLogin.text.toString()
-
-            if (viewModel.validateCredentials(email, password)) {
-                // Inicio de sesión exitoso
-                Toast.makeText(this, "Accediendo...", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, HomeNavigationActivity::class.java))
-                viewModel.onHomeNavigated()
-            } else {
-                // Inicio de sesión fallido
-                Log.i("Loginnewuser for else", "Email: $email, Password: $password")
-
-                Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-            }
-        }*/
-
-
     }
 
+    /**
+     * Método para manejar la acción de inicio de sesión.
+     * Valida los campos de correo electrónico y contraseña, y llama al ViewModel para iniciar sesión.
+     */
     private fun login() {
         val email = binding.enterEmailLogin.text.toString()
         val password = binding.enterPasswordLogin.text.toString()
@@ -58,19 +47,26 @@ class LoginPageActivity : AppCompatActivity() {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             viewModel.login(email, password)
         } else {
+            // Mostrar error si el campo de correo electrónico o contraseña está vacío
             binding.enterEmailLogin.error = "Por favor ingrese un correo electrónico"
             binding.enterPasswordLogin.error = "Por favor ingresa una contraseña"
         }
     }
 
+    /**
+     * Inicializa ViewModel y establece observadores para la navegación y eventos del ViewModel.
+     */
     private fun initializeViewModelsNavigation() {
+        // Configurar ViewModel y ViewModelFactory para la página de inicio de sesión
         val alkeApiService = RetrofitHelper.getRetrofit(this).create(AlkeApiService::class.java)
         val alkeRepository = WalletRepositoryImplement(alkeApiService)
         val alkeUseCase = LoginUseCase(alkeRepository)
         val loginViewModelFactory = LoginPageViewModelFactory(alkeUseCase, this)
 
-        viewModel =
-            ViewModelProvider(this, loginViewModelFactory).get(LoginPageViewModel::class.java)
+        // Inicializar ViewModel utilizando ViewModelProvider y ViewModelFactory
+        viewModel = ViewModelProvider(this, loginViewModelFactory).get(LoginPageViewModel::class.java)
+
+        // Observar el LiveData para la navegación al HomeNavigationActivity después del inicio de sesión exitoso
         viewModel.userProfileSaved.observe(this) { isSaved ->
             if (isSaved) {
                 startActivity(Intent(this, HomeNavigationActivity::class.java))
@@ -80,6 +76,7 @@ class LoginPageActivity : AppCompatActivity() {
             }
         }
 
+        // Observar el LiveData para la navegación a SingupActivity al hacer clic en "Crear cuenta"
         viewModel.navigateToSingUpPage.observe(this, Observer { navigate ->
             if (navigate) {
                 startActivity(Intent(this, SingupActivity::class.java))
@@ -87,8 +84,27 @@ class LoginPageActivity : AppCompatActivity() {
             }
         })
 
+        // Configurar clic listener para el enlace "Crear cuenta" que llama a navigateToSingUpPage en el ViewModel
         binding.createAccountLinkLogin.setOnClickListener {
             viewModel.navigateToSingUpPage()
         }
     }
 }
+
+// Código comentado para referencia
+/*binding.loginAccountButton.setOnClickListener {
+    val email = binding.enterEmailLogin.text.toString()
+    val password = binding.enterPasswordLogin.text.toString()
+
+    if (viewModel.validateCredentials(email, password)) {
+        // Inicio de sesión exitoso
+        Toast.makeText(this, "Accediendo...", Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, HomeNavigationActivity::class.java))
+        viewModel.onHomeNavigated()
+    } else {
+        // Inicio de sesión fallido
+        Log.i("Loginnewuser for else", "Email: $email, Password: $password")
+
+        Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+    }
+}*/

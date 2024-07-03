@@ -58,14 +58,14 @@ class LoginPageViewModel(private val loginUseCase: LoginUseCase, private val con
         _navigateToHome.value = false
     }
 
-    /**
-     * Función para validar al usuario con la data de usuarios en la data class
-     */
-    fun validateCredentials(email: String, password: String): Boolean {
-        val registeredUsers = LoginUser.dataLoginUsers
-        val user = registeredUsers.find { it.email == email && it.password == password }
-        return user != null
-    }
+//    /**
+//     * Función para validar al usuario con la data de usuarios en la data class
+//     */
+//    fun validateCredentials(email: String, password: String): Boolean {
+//        val registeredUsers = LoginUser.dataLoginUsers
+//        val user = registeredUsers.find { it.email == email && it.password == password }
+//        return user != null
+//    }
 
     fun login(email: String, password: String) {
         viewModelScope.launch {
@@ -74,8 +74,10 @@ class LoginPageViewModel(private val loginUseCase: LoginUseCase, private val con
                 SharedPreferencesHelper.saveToken(context, token)
                 _loginResult.value = token
                 searchAndSaveUserProfile()
+                Log.d("TokenSave", "Login successful, your token is: $token")
             } catch (e: Exception) {
                 _error.value = e.message
+                Log.e("TokenSave", "Login fail", e)
 
             }
         }
@@ -87,9 +89,11 @@ class LoginPageViewModel(private val loginUseCase: LoginUseCase, private val con
                 val user = loginUseCase.myProfile()
                 SharedPreferencesHelper.idUserLogged(context, user.id)
                 _userProfileSaved.value = true
+                Log.d("SaveUser", "Your profile is saved: ${user.id}")
             } catch (e: Exception) {
                 _error.value = e.message
                 _userProfileSaved.value = false
+                Log.e("SaveUser", "User profile is not saved",e)
 
             }
         }
