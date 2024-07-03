@@ -14,3 +14,5 @@ Se utiliza /transactions para intentar crear transacción y get para mostrar
 Se intenta agregar nueva transacción pero no se encuentran los datos para enviar
 
 Se utiliza TokenInterceptor para manejar el token
+
+No se hicieron test debido a crash del grade
